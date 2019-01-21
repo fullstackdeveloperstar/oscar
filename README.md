@@ -53,6 +53,22 @@ pwd: test
 	"user":null
 }
 
+#set Problem
+https://www.swanntechnologies.com/Oscar2018/backend/setProblem
+
+-post
+problems : [{"name":"0","value":"r0007p"},{"name":"1","value":"r1001p"},{"name":"2","value":"r2003p"},{"name":"3","value":"r3001p"},{"name":"4","value":"r4004p"},{"name":"5","value":"r5003p"},{"name":"6","value":"r6004p"},{"name":"7","value":"r7000p"},{"name":"8","value":"r8000p"},{"name":"9","value":"r9002p"},{"name":"10","value":"r100002p"},{"name":"11","value":"r110000p"},{"name":"12","value":"r120001p"},{"name":"13","value":"r130000p"},{"name":"14","value":"r140000p"},{"name":"15","value":"r150002p"},{"name":"16","value":"r160002p"},{"name":"17","value":"r170004p"},{"name":"18","value":"r180004p"},{"name":"19","value":"r190000p"},{"name":"20","value":"r200002p"},{"name":"21","value":"r210000p"},{"name":"22","value":"r220002p"},{"name":"23","value":"r230002p"}]
+
+oscar_title : test title
+how_many : 10
+uid: 26
+
+-res
+{
+    "status": true
+}
+
+
 # getData
 https://www.swanntechnologies.com/Oscar2018/backend/getdata
 

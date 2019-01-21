@@ -58,5 +58,16 @@ class Backend extends CI_Controller {
 
 		echo json_encode($data);
 	}
+
+	public function setProblem() {		
+		$problems = $this->input->post('problems');
+        $info1 = $this->input->post('oscar_title');
+    	$info2 = $this->input->post('how_many');
+		$uid = $this->input->post("uid");
+		
+		$this->home_model->setProblem($uid, $problems, $info1, $info2);		
+
+		echo json_encode(array('status' => true));
+	}
 }
 	

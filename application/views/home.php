@@ -67,7 +67,7 @@
 	
 	
 	<div style="width:100%;text-align:center;background: #fafafa;margin-top: 15px;padding-top: 15px;padding-bottom: 10px;">
-		<?php if ($admin_answers=='') { ?>
+		<?php if ($admin_answers =='') { ?>
 		<button type="button" class="btn btn-danger waves-effect w-md waves-light m-b-5" id="reset_user">Reset</button>
 		<button type="submit" class="btn btn-success waves-effect w-md waves-light m-b-5">Submit to Server</button>
 		<?php }?>
