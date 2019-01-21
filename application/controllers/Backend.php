@@ -49,9 +49,12 @@ class Backend extends CI_Controller {
 		$uid = $this->input->post('uid');
 		$data['user_answers'] = $this->home_model->getProblem($uid);
 		$data['admin_answers'] = $this->home_model->getAnswer($uid);
-        $data['info1'] = $this->home_model->getInfo1($uid);
-		$data['info2'] = $this->home_model->getInfo2($uid);
-		$data['info3'] = $this->admin_model->getCountOfCorrectAnswers($uid);
+        $data['oscar_title'] = $this->home_model->getInfo1($uid);
+		$data['how_many'] = $this->home_model->getInfo2($uid);
+		$data['correct_answer'] = $this->admin_model->getCountOfCorrectAnswers($uid);
+		$data['user'] = $this->admin_model->getUserInfoById($uid);
+		$data['problems'] = $this->config->item('problems');
+		$data['year'] = date("Y");
 
 		echo json_encode($data);
 	}

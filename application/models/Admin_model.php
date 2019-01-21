@@ -262,5 +262,23 @@ Class Admin_model extends CI_Model {
         $this->db->where('id', $userId);
         $this->db->update('tb_user', $data);
     }
+
+    public function getUserInfoById($id) {
+		$result = array();
+		
+		if ($id == "")
+			return $result;
+		
+		$query = "SELECT * FROM tb_user WHERE id=".$id." LIMIT 1";
+		$query = $this->db->query($query);
+		
+		if ($query->num_rows() > 0) {
+			$row = $query->row();
+		
+			$result = array('id'=>$row->id, 'name'=>$row->name, 'email'=>$row->email, 'password'=>$row->pwd, 'level'=>$row->level, 'score'=>$row->score);
+		}		
+		
+		return $result;		
+	}
 	
 }
