@@ -36,7 +36,7 @@ class Home extends CI_Controller {
 
 			$info = $this->session->userdata['sign'];
 			$data['user_answers'] = $this->home_model->getProblem($info['id']);
-			$data['admin_answers'] = $this->home_model->getAnswer();
+			$data['admin_answers'] = $this->home_model->getAnswer($info['id']);
             $data['info1'] = $this->home_model->getInfo1($info['id']);
     		$data['info2'] = $this->home_model->getInfo2($info['id']);
     		$data['info3'] = $this->admin_model->getCountOfCorrectAnswers($info['id']);

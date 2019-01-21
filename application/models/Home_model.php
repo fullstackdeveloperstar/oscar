@@ -88,11 +88,11 @@ Class Home_model extends CI_Model {
 		return $result;
 	}
 	
-	public function getAnswer() {
+	public function getAnswer($user_id) {
 		$id = '';
 		$result = '';
 		
-		$user_id = $this->session->userdata['sign']['id'];
+		// $user_id = $this->session->userdata['sign']['id'];
 
 		$query = "SELECT * FROM tb_user WHERE level=100 LIMIT 1";
 		$query = $this->db->query($query);

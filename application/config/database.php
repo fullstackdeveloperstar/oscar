@@ -75,15 +75,15 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	// 'hostname' => 'ballot2017.db.9839004.hostedresource.com',
-	// 'username' => 'ballot2017',
-	// 'password' => 'Admin2017@admin',
-	// 'database' => 'ballot2017',
+	'hostname' => 'localhost',
+	'username' => 'root',
+	'password' => '',
+	'database' => 'oscar',
 
-	'hostname' => 'ballot2018.db.9839004.992.hostedresource.net',
-	'username' => 'ballot2018',
-	'password' => 'Admin2017@admin',
-	'database' => 'ballot2018',
+	// 'hostname' => 'ballot2018.db.9839004.992.hostedresource.net',
+	// 'username' => 'ballot2018',
+	// 'password' => 'Admin2017@admin',
+	// 'database' => 'ballot2018',
 
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
