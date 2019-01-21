@@ -68,6 +68,19 @@ uid: 26
     "status": true
 }
 
+# change password
+
+https://www.swanntechnologies.com/Oscar2018/backend/changePassword
+
+-post
+new_pwd: test
+old_pwd: testtest
+uid: 26
+
+-res
+{"state":true,"msg":"Your Password changed."}
+{"state":false,"msg":"Please input old password again. This is invalidate."}
+
 
 # getData
 https://www.swanntechnologies.com/Oscar2018/backend/getdata

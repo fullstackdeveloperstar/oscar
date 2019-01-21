@@ -30,6 +30,14 @@ Class Admin_model extends CI_Model {
 		
 		return true;
 	}
+
+	public function changePasswordById($id='', $pwd='') {
+		$this->db->set('pwd', md5($pwd));
+		$this->db->where('id', $id);
+		$this->db->update('tb_user');
+		
+		return true;
+	}
 	
 	public function isExistEmail($email='') {
 		if ($email == '')
@@ -38,6 +46,16 @@ Class Admin_model extends CI_Model {
 		$query = "SELECT id FROM tb_user WHERE email='$email'";
 		$query = $this->db->query($query);
 	
+		return $query->num_rows()>0 ? true : false;
+	}
+
+	public function isExistUserById($id, $password) {
+		
+		
+		$query = "SELECT id FROM tb_user WHERE id='$id' AND pwd=MD5('$password')";
+		
+		$query = $this->db->query($query);
+		
 		return $query->num_rows()>0 ? true : false;
 	}
 	

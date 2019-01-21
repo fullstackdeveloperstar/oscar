@@ -69,5 +69,22 @@ class Backend extends CI_Controller {
 
 		echo json_encode(array('status' => true));
 	}
+
+	public function changePassword() {	
+		$new_pwd = $this->input->post('new_pwd');
+		$old_pwd = $this->input->post('old_pwd');
+		$uid = $this->input->post("uid");
+	
+		if ($this->admin_model->isExistUserById($uid, $old_pwd)) {
+			$this->admin_model->changePasswordById($uid, $new_pwd);			
+			$state = true;
+			$msg = 'Your Password changed.';
+		} else {
+			$state = false;
+			$msg = 'Please input old password again. This is invalidate.';
+		}
+		
+		echo json_encode(array('state'=>$state, 'msg'=>$msg));
+	}
 }
 	
