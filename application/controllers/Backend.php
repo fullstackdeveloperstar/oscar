@@ -20,7 +20,7 @@ class Backend extends CI_Controller {
 		$state = $user_info!=null ? true : false;
 		$msg = !$state ? 'Your email or password is invalid.' : '';
 
-		echo json_encode(array('state'=>$state, 'msg'=>$msg, "user" => $user_info));
+		echo json_encode(array('state'=>$state, 'msg'=>$msg, "user" => $user_info, "year" =>date("Y")));
 	}
 
 
@@ -42,7 +42,7 @@ class Backend extends CI_Controller {
 			$user_info = $this->admin_model->signIn($email, $password);
 		}
 		
-		echo json_encode(array('state'=>$state, 'msg'=>$msg, "user" => $user_info));
+		echo json_encode(array('state'=>$state, 'msg'=>$msg, "user" => $user_info, "year" =>date("Y")));
 	}
 
 	public function getData() {

@@ -81,7 +81,7 @@ Class Admin_model extends CI_Model {
 		if ($query->num_rows() > 0) {
 			$row = $query->row();
 		
-			$result = array('id'=>$row->id, 'name'=>$row->name, 'email'=>$row->email, 'password'=>$row->pwd, 'level'=>$row->level, 'score'=>$row->score);
+			$result = array('id'=>$row->id, 'name'=>$row->name, 'email'=>$row->email, 'password'=>$row->pwd, 'level'=>$row->level, 'score'=>$row->score, 'how_many'=>$row->info2, 'oscar_title' => $row->info1);
 		}		
 		
 		return $result;		

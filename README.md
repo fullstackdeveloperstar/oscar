@@ -7,16 +7,19 @@ pwd: test
 
 -response
 {
-	"state":true,
-	"msg":"",
-	"user":{
-		"id":"41",
-		"name":"Test User",
-		"email":"testuser@mail.com",
-		"password":"098f6bcd4621d373cade4e832627b4f6",
-		"level":"101",
-		"score":"0"
-	}
+    "state": true,
+    "msg": "",
+    "user": {
+        "id": "41",
+        "name": "Test User",
+        "email": "testuser@mail.com",
+        "password": "098f6bcd4621d373cade4e832627b4f6",
+        "level": "101",
+        "score": "0",
+        "how_many": "5",
+        "oscar_title": "The shape of water"
+    },
+    "year": "2019"
 }
 
 {
